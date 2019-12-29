@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map WTC801
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+WTC801	KEYWORD1	WTC801
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+setOnEvent	KEYWORD2
+loop	KEYWORD2
+ReadKeyLeft	KEYWORD2
+ReadKeyRight	KEYWORD2
+ReadKeyPower	KEYWORD2
+ReadSlider	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+Slider	LITERAL1
+KeyLeft LITERAL1
+KeyPower LITERAL1
+KeyRight LITERAL1
+
