@@ -81,3 +81,11 @@ void loop() {
   panel.loop();
 }
 ```
+
+
+## Installation
+
+1. Navigate to the Releases page.
+2. Download the latest release.
+3. Extract the zip file
+4. In the Arduino IDE, navigate to Sketch > Include Library > Add .ZIP Library
