@@ -3,7 +3,6 @@
 
 // 8 ms interval. Datasheet specifies minimum 4ms between reads.
 #define READ_PERIOD 8
-
 // MAX and MIN are actually 54 and 1, but it is set to 53 and 2 to have better usage
 #define SLIDER_MAX 53
 #define SLIDER_MIN 2
@@ -46,7 +45,7 @@ void WTC801::begin() {
   lastRead = millis();
 }
 
-void WTC801::setOnEvent(void (*onKeyEvent)(KeyEvent, uint8_t)) {
+void WTC801::setOnEvent(std::function<void(KeyEvent, uint8_t)> onKeyEvent) {
   this->onKeyEvent = onKeyEvent;
 }
 

@@ -2,6 +2,7 @@
 #define _WTC801_
 
 #include <Arduino.h>
+#include <functional>
 
 enum KeyEvent {
   Slider,
@@ -12,7 +13,7 @@ enum KeyEvent {
 
 class WTC801 {
   private:
-    void (*onKeyEvent)(KeyEvent, uint8_t) = NULL;
+    std::function<void(KeyEvent, uint8_t)> onKeyEvent;
     int8_t SCK, MOSI, MISO, CS;
     long lastRead;
 
@@ -31,7 +32,7 @@ class WTC801 {
     WTC801(int8_t SCK, int8_t MOSI, int8_t MISO, int8_t CS);
 
     void begin();
-    void setOnEvent(void (*onKeyEvent)(KeyEvent, uint8_t));
+    void setOnEvent(std::function<void(KeyEvent, uint8_t)>);
     void loop();
 
     inline uint8_t ReadKeyLeft()  { return lastKeyLeft;     }
